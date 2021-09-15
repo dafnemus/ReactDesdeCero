@@ -1,0 +1,27 @@
+.form-container {
+  align-items: center;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 400px;
+}
+
+.form-container button {
+  background-color: black;
+  color: wheat;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.form-container input {
+  padding: 10px;
+}
+
+.form-container label {
+  font-size: 1.2rem;
+  position: relative;
+}
