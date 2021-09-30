@@ -5,9 +5,10 @@ import Search from './ejercicios/search';
 function App() {
   return (
     <div className='App'>
-      <h2 className="title">Ejercicio Maquetado: LogIn básico.</h2>
+      <h2 className='title'>Ejercicio Maquetado: LogIn básico.</h2>
       <LoginFormBasic />
-      <h2 className="title">Ejercicio: Buscador</h2>
+      <hr className='divider' />
+      <h2 className='title'>Ejercicio: Buscador</h2>
       <Search />
     </div>
   );

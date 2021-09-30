@@ -1,5 +1,10 @@
 import SearchBox from './components/SearchBox';
+import './style.css';
 
 export default function Search() {
-  return <SearchBox />;
+  return (
+    <div className='search'>
+      <SearchBox />
+    </div>
+  );
 }

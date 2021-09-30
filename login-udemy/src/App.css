@@ -5,6 +5,12 @@
   width: 100vw;
 }
 
+.divider {
+  height: 3px;
+  background-color: wheat;
+  margin: 20px 0;
+}
+
 .title {
   color: wheat;
   margin: 20px;
