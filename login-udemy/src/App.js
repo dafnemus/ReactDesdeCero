@@ -10,6 +10,8 @@ function App() {
       <hr className='divider' />
       <h2 className='title'>Ejercicio: Buscador</h2>
       <Search />
+      <hr className='divider' />
+      <h2 className='title'>Ejercicio: </h2>
     </div>
   );
 }
