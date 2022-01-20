@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import './login.css';
+import { useState } from "react";
+import "./login.css";
 
 function LoginFormBasic() {
   const [form, setForm] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     isLogin: false,
   });
 
@@ -19,25 +19,25 @@ function LoginFormBasic() {
   return (
     <>
       {form.isLogin ? (
-        <h2 className='title'> Bienvenido {`${form.email}`}!!!</h2>
+        <h2 className="title"> Bienvenido {`${form.email}`}!!!</h2>
       ) : (
-        <form className='form-container' onSubmit={handleSubmit}>
+        <form className="form-container" onSubmit={handleSubmit}>
           <h2>Iniciar Sesión</h2>
           <label>Email:</label>
           <input
-            id='email'
-            type='email'
+            id="email"
+            type="email"
             value={form.email}
             onChange={handleInputChange}
           />
           <label>Contraseña:</label>
           <input
-            id='password'
-            type='password'
+            id="password"
+            type="password"
             value={form.password}
             onChange={handleInputChange}
           />
-          <button type='submit'>Enviar</button>
+          <button type="submit">Enviar</button>
         </form>
       )}
     </>
