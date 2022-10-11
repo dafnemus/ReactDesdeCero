@@ -1,17 +1,36 @@
 import { useState } from 'react';
 import SearchBox from './components/SearchBox';
+import data from '../../data/users.json';
 import './style.css';
 
 export default function Search() {
   const [isAtop, setIsAtTop] = useState(false);
+  const [results, setResults] = useState([]);
 
-  const handleCloseOpenSearchClick = () => setIsAtTop(!isAtop);
+  const handleCloseSearchClick = () => {
+    setIsAtTop(false);
+    setResults([]);
+  };
+
+  const handleSearchClick = (text) => {
+    if (data?.length) {
+      const searchText = text.toLocaleLowerCase();
+      const filteredData = data.filter(
+        (value) =>
+          value.name.toLocaleLowerCase().includes(searchText) ||
+          value.username.toLocaleLowerCase().includes(searchText) ||
+          value.email.toLocaleLowerCase().includes(searchText) ||
+          value.phone.toLocaleLowerCase().includes(searchText)
+      );
+      setResults(filteredData);
+    }
+  };
 
   return (
     <div className={`search ${isAtop ? 'searchTop' : 'searchCenter'}`}>
       <SearchBox
-        onSearch={handleCloseOpenSearchClick}
-        onClose={handleCloseOpenSearchClick}
+        onSearch={handleSearchClick}
+        onClose={handleCloseSearchClick}
       />
     </div>
   );
