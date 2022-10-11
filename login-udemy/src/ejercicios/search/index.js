@@ -4,9 +4,11 @@ import "./style.css";
 
 export default function Search() {
   const [isAtop, setIsAtTop] = useState(false);
+
   const handleSearchClick = () => {
     setIsAtTop(true);
   };
+
   const handleCloseClick = () => {
     setIsAtTop(false);
   };
