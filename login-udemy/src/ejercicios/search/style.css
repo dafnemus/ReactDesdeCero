@@ -1,10 +1,10 @@
 .search {
   height: 500px;
-  position: relative;
+  color: #fff;
 }
 
 .searchCenter {
-  top: 150px;
+  top: 0px;
 }
 
 .searchTop {

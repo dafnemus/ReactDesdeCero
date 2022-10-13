@@ -2,6 +2,7 @@ import { useState } from 'react';
 import SearchBox from './components/SearchBox';
 import data from '../../data/users.json';
 import './style.css';
+import SearchResults from './components/SearchResults';
 
 export default function Search() {
   const [isAtop, setIsAtTop] = useState(false);
@@ -32,6 +33,7 @@ export default function Search() {
         onSearch={handleSearchClick}
         onClose={handleCloseSearchClick}
       />
+      <SearchResults />
     </div>
   );
 }
