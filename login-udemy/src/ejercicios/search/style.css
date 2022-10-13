@@ -1,12 +1,21 @@
 .search {
-  height: 500px;
   color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
 .searchCenter {
-  top: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .searchTop {
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: start;
 }

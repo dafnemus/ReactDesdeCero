@@ -14,6 +14,7 @@ export default function Search() {
   };
 
   const handleSearchClick = (text) => {
+    setIsAtTop(true);
     if (data?.length) {
       const searchTextMinus = text.toLowerCase();
       const filteredData = data.filter(
@@ -32,8 +33,9 @@ export default function Search() {
       <SearchBox
         onSearch={handleSearchClick}
         onClose={handleCloseSearchClick}
+        isSearching={isAtop}
       />
-      <SearchResults results={results} />
+      <SearchResults results={results} isSearching={isAtop} />
     </div>
   );
 }
