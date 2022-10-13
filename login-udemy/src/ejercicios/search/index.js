@@ -15,13 +15,13 @@ export default function Search() {
 
   const handleSearchClick = (text) => {
     if (data?.length) {
-      const searchText = text.toLocaleLowerCase();
+      const searchTextMinus = text.toLowerCase();
       const filteredData = data.filter(
         (value) =>
-          value.name.toLocaleLowerCase().includes(searchText) ||
-          value.username.toLocaleLowerCase().includes(searchText) ||
-          value.email.toLocaleLowerCase().includes(searchText) ||
-          value.phone.toLocaleLowerCase().includes(searchText)
+          value.name.toLowerCase().includes(searchTextMinus) ||
+          value.phone.toLowerCase().includes(searchTextMinus) ||
+          value.email.toLowerCase().includes(searchTextMinus) ||
+          value.username.toLowerCase().includes(searchTextMinus)
       );
       setResults(filteredData);
     }
@@ -33,7 +33,7 @@ export default function Search() {
         onSearch={handleSearchClick}
         onClose={handleCloseSearchClick}
       />
-      <SearchResults />
+      <SearchResults results={results} />
     </div>
   );
 }
