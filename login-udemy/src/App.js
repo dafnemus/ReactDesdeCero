@@ -1,15 +1,10 @@
-import LoginFormBasic from './ejercicios/BasicLogin';
 import './App.css';
-import Search from './ejercicios/search';
+import Routes from './routes';
 
 function App() {
   return (
     <div className='App'>
-      <h2 className='title'>Ejercicio Maquetado: LogIn básico.</h2>
-      <LoginFormBasic />
-      <hr className='divider' />
-      <h2 className='title'>Ejercicio: Buscador</h2>
-      <Search />
+      <Routes />
     </div>
   );
 }
