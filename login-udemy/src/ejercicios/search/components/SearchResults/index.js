@@ -1,3 +1,4 @@
+import SearchResultsItem from './SearchResultsItem';
 import './styles.css';
 
 export default function SearchResults({ results, isSearching }) {
@@ -5,12 +6,7 @@ export default function SearchResults({ results, isSearching }) {
     <div>
       {!results.length && isSearching && <p>No existen resultados</p>}
       {results.map((data) => {
-        return (
-          <div key={data.id} className="search-results">
-            <p>Nombre: {data.name}</p>
-            <p>Email: {data.email}</p>
-          </div>
-        );
+        return <SearchResultsItem data={data} key={data.id} />;
       })}
     </div>
   );
